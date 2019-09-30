@@ -5,19 +5,23 @@ Just something i wrote that allows you to prototype classes / functions within a
 Example of a JSON file below:
 
 ```JSON
+/* OPTIONAL INPUTS FOR FUNCTIONS / CLASSES ARE BELOW: */
+/* 1. "decorators - array of strings */
+/* 2. "args - array of function input variables */
+
 {   
-    "output_file_name": "this_file", // this is the file that you waqnt to output to
-    "func_definitions": [ // arrray of function definitions that are outside of a class
+    "output_file_name": "this_file",
+    "func_definitions": [
         {
             "decorators":[
                 "@login_required",
                 "@permission_required('this_is_a_permission')"
-            ],  // optional
+            ],
             "function_name": "this_is_a_function_with_decorators",
             "args": [
                 "arg1",
                 "arg2"
-            ]  // optional
+            ]
         }
     ],
     "class_definitions":[ // array of class definitions
