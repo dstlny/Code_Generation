@@ -30,8 +30,8 @@ Example of a JSON file below:
                 "@login_required",
                 "@permission_required('this_is_a_permission')"
             ], 
-            "class_name":"this_is_a_test_class_without_decorators", // name of the class
-            "this_is_a_test_class_without_decorators_funcs": [ // this name must coincide with the classes name + _funcs
+            "class_name":"this_is_a_test_class_without_decorators",
+            "this_is_a_test_class_without_decorators_funcs": [
                 {   
                     "decorators":[
                         "@login_required",
