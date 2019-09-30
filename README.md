@@ -109,3 +109,60 @@ Example of a JSON file below:
 }
 
 ```
+
+With these simple definitions, you can generate the following code:
+```Python
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@login_required
+@permission_required('this_is_a_permission')
+def this_is_a_function_with_decorators(self, arg1, arg2):
+	pass
+
+def this_is_a_function_without_decorators(self, arg1, arg2):
+	pass
+
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@login_required
+@permission_required('this_is_a_permission')
+class this_is_a_test_class_with_decorators():
+
+	@login_required
+	@permission_required('this_is_a_permission')
+	def this_is_a_function_with_decorators(self, arg1, arg2):
+		pass
+
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+class this_is_a_test_class_without_decorators():
+
+	def this_is_a_function_without_decorators(self, arg1, arg2):
+		pass
+
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@login_required
+@permission_required('this_is_a_permission')
+class this_is_a_test_class_with_decorators():
+
+	def this_is_a_function_without_decorators(self, arg1, arg2):
+		pass
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@login_required
+@permission_required('this_is_a_permission')
+class this_is_a_test_class_without_decorators():
+
+	@login_required
+	@permission_required('this_is_a_permission')
+	def this_is_a_function_with_decorators(self, arg1, arg2):
+		pass
+
+	def this_is_a_function_without_decorators(self, arg1, arg2, arg3, arg5):
+		pass
+
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+
+Simply put: allows you to prototype class/view/function definitions.
