@@ -24,24 +24,24 @@ Example of a JSON file below:
             ]
         }
     ],
-    "class_definitions":[ // array of class definitions
+    "class_definitions":[
         {  
             "decorators":[
                 "@login_required",
                 "@permission_required('this_is_a_permission')"
-            ],  // decorators for the class
+            ], 
             "class_name":"this_is_a_test_class_without_decorators", // name of the class
             "this_is_a_test_class_without_decorators_funcs": [ // this name must coincide with the classes name + _funcs
                 {   
                     "decorators":[
                         "@login_required",
                         "@permission_required('this_is_a_permission')"
-                    ], // optional
+                    ],
                     "function_name": "this_is_a_function_with_decorators",
                     "args": [
                         "arg1",
                         "arg2"
-                    ] // optional
+                    ]
                 },
                 {
                     "function_name": "this_is_a_function_without_decorators",
